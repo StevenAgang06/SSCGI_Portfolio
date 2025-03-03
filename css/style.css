@@ -1,0 +1,394 @@
+:root {
+  --font-color: #343a40;
+  --background: #212529;
+  --secondary-font: #fff;
+  --secondary-background: #f8f9fa;
+  --transition: 200ms ease-in-out;
+  --paragraph-letter-spacing: 1.5px;
+  --paragraph-line-height: 1.5;
+}
+
+/* Font Sizing */
+
+/* Mobile Screen */
+/* h2 : 1.2rem 
+    p :1.4rem */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 61.9%;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--secondary-font);
+}
+/* nav style */
+
+header {
+  z-index: 99999;
+  color: var(--secondary-font);
+  display: flex;
+  padding: 2rem;
+  outline: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+}
+header article {
+  display: flex;
+}
+.slash {
+  margin-block: 0;
+  margin-inline: 0.5rem;
+  padding: 0;
+  font-size: 2rem;
+}
+header article h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: "Moon Dance", "Inter", sans-serif;
+  align-self: flex-start;
+}
+header article h2 {
+  font-family: "Moon Dance", "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+nav {
+  margin-block: 0.5rem;
+  height: 0px;
+  font-size: 1.5rem;
+  overflow: auto;
+  transition: var(--transition);
+  width: 100%;
+}
+nav ul {
+  padding-inline: 0 !important;
+}
+nav ul li {
+  padding-block: 0.4rem;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-font);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.dropdown {
+  height: 18rem !important;
+  padding-block: 1rem;
+}
+header svg {
+  align-self: flex-start;
+  width: 4rem;
+  cursor: pointer;
+}
+
+/* End */
+
+main {
+  overflow: hidden;
+  max-width: 100%;
+  background-color: var(--background);
+}
+/* Intro Style */
+#intro {
+  max-width: inherit;
+  margin-top: 15rem;
+  padding-block-start: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  text-align: center;
+}
+#intro figure img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 200rem;
+  border: 5px solid var(--secondary-font);
+}
+#intro figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block-end: 5rem;
+}
+#intro figcaption p {
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  word-wrap: break-word;
+  font-size: 1.4rem;
+  text-align: left;
+  word-spacing: 1px;
+  color: var(--secondary-font);
+}
+#intro figcaption section {
+  align-self: center;
+  padding-inline: 1.5rem;
+}
+#intro figcaption section a {
+  margin-inline: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+#intro figcaption section a:first-child {
+  text-decoration: none;
+  color: var(--secondary-font);
+  background-color: var(--background);
+  box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+}
+#intro figcaption section a:nth-child(2) {
+  text-decoration: none;
+  color: var(--font-color);
+  background-color: var(--secondary-font);
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+#intro figcaption section a .goDown {
+  stroke: var(--font-color);
+  width: 1.5rem;
+}
+/* End */
+
+/* Projects Style */
+#projects {
+  border-block: 1px dashed white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  color: var(--font-color);
+}
+#projects h2 {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--secondary-font);
+}
+#projects figure {
+  max-width: 100%;
+  height: auto;
+  background-color: var(--secondary-background);
+  border-radius: 10px;
+  position: relative;
+}
+#projects figure .image {
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#projects figure figcaption {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+#projects figure figcaption h3 {
+  padding-block: 1rem;
+  font-size: 2rem;
+}
+#projects figure figcaption p {
+  font-size: 1.2rem;
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+  height: 10rem;
+  overflow-y: auto;
+}
+#projects figure span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.3rem;
+  margin-block: 0.2rem;
+  transition: 300ms ease-in-out;
+}
+
+#projects figure .live,
+#projects figure .github {
+  border-radius: 5px;
+  background-color: var(--secondary-background);
+}
+#projects figure .live:hover,
+#projects figure .github:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#projects figure .live {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 600;
+  padding: 1rem;
+}
+#projects figure span .github {
+  padding-block: 0.7rem;
+  padding-inline: 1rem;
+}
+#projects figure span a img {
+  width: 2rem;
+}
+#projects figure .tech {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#projects figure .tech p {
+  font-size: 1rem;
+  background-color: var(--background);
+  color: var(--secondary-font);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+/* End */
+
+/* Certificates Style */
+
+#certificate {
+  padding: 2rem;
+  color: var(--font-color);
+  border-bottom: 1px dashed var(--secondary-background);
+}
+#certificate h2 {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--secondary-font);
+}
+/* End */
+
+/* Technologies Style */
+#techstack {
+  max-width: 100%;
+  border-bottom: 1px dashed var(--secondary-background);
+}
+#techstack h2 {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--secondary-font);
+}
+#techstack figure {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 80%;
+  gap: 5rem;
+}
+#techstack figure img {
+  max-width: 8rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--secondary-background);
+}
+/* End */
+
+/* About me Style */
+#about {
+  max-width: inherit;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  text-align: center;
+}
+#about h2 {
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--secondary-font);
+}
+#about figure img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 200rem;
+  border: 5px solid var(--secondary-font);
+}
+#about figcaption p {
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  word-wrap: break-word;
+  font-size: 1.4rem;
+  text-align: left;
+  word-spacing: 1px;
+  color: var(--secondary-font);
+}
+#about figcaption a {
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 1rem;
+  background-color: var(--secondary-background);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+/* End */
+
+/* contacts style */
+#contacts {
+  outline: 1px solid white;
+}
+#contacts h2 {
+  margin-block: 5rem;
+  padding-block-start: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--secondary-font);
+}
+#contacts form {
+  margin-block-start: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  color: var(--secondary-font);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#contacts form input,
+#contacts form label,
+#contacts form textarea {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+#contacts form input,
+#contacts form textarea {
+  margin-block: 1rem;
+}
+#contacts form input[type="submit"] {
+  width: 15rem;
+  align-self: flex-end;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+}
+#contacts form label {
+  vertical-align: top;
+}
