@@ -8,6 +8,23 @@
   --paragraph-line-height: 1.5;
 }
 
+/* Scrollbar Design */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 255, 0.5);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 255, 0.9);
+  cursor: pointer;
+}
+
 /* Font Sizing */
 
 /* Mobile Screen */
@@ -19,7 +36,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-
   scroll-behavior: smooth;
 }
 
@@ -30,11 +46,6 @@ html {
   color: var(--secondary-font);
 }
 /* nav style */
-a:hover {
-  color: blue;
-  font-weight: 600;
-  transition: var(--transition);
-}
 header {
   z-index: 99999;
   color: var(--secondary-font);
@@ -134,7 +145,11 @@ nav ul li a {
   font-weight: 600;
   font-size: 2rem;
 }
-
+header nav ul li a:hover {
+  color: rgba(0, 0, 200, 0.9);
+  font-weight: 600;
+  transition: var(--transition);
+}
 .dropdown {
   height: 18rem !important;
   padding-block: 1rem;
@@ -198,6 +213,7 @@ main {
   font-size: 1.5rem;
   border-radius: 5px;
   font-weight: 600;
+  transition: var(--transition);
 }
 #intro figcaption section a:first-child {
   text-decoration: none;
@@ -217,6 +233,11 @@ main {
   stroke: var(--font-color);
   width: 1.5rem;
 }
+
+#intro figcaption section a:hover {
+  transform: rotate(90deg);
+}
+
 /* End */
 
 /* Projects Style */
@@ -419,6 +440,7 @@ main {
 /* contacts style */
 #contacts {
   padding: 2rem;
+  margin-inline: auto;
   margin-block: 10rem;
 }
 #contacts h2 {
