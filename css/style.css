@@ -19,6 +19,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 html {
@@ -28,7 +30,11 @@ html {
   color: var(--secondary-font);
 }
 /* nav style */
-
+a:hover {
+  color: blue;
+  font-weight: 600;
+  transition: var(--transition);
+}
 header {
   z-index: 99999;
   color: var(--secondary-font);
@@ -46,6 +52,50 @@ header {
 header article {
   display: flex;
 }
+/* header article h1,
+header article .slash,
+header article h2 {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny 500ms infinite;
+}
+
+@keyframes shiny {
+  0% {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(52, 58, 64, 0.5),
+      var(--secondary-background)
+    );
+  }
+  25% {
+    background-image: linear-gradient(
+      to left,
+      rgba(52, 58, 64, 0.5),
+      var(--secondary-background)
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      to top,
+      rgba(52, 58, 64, 0.5),
+      var(--secondary-background)
+    );
+  }
+  75% {
+    background-image: linear-gradient(
+      to right,
+      rgba(52, 58, 64, 0.5),
+      var(--secondary-background)
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      rgba(52, 58, 64, 0.5),
+      var(--secondary-background)
+    );
+  }
+} */
 .slash {
   margin-block: 0;
   margin-inline: 0.5rem;
@@ -106,6 +156,7 @@ main {
 #intro {
   max-width: inherit;
   margin-top: 15rem;
+  margin-bottom: 10rem;
   padding-block-start: 1rem;
   display: flex;
   flex-direction: column;
@@ -124,6 +175,8 @@ main {
   flex-direction: column;
   gap: 2rem;
   padding-block-end: 5rem;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 #intro figcaption p {
   padding-block: 1rem;
@@ -168,12 +221,12 @@ main {
 
 /* Projects Style */
 #projects {
-  border-block: 1px dashed white;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
   color: var(--font-color);
+  margin-block: 10rem;
 }
 #projects h2 {
   margin-top: 5rem;
@@ -189,13 +242,14 @@ main {
   position: relative;
 }
 #projects figure .image {
-  max-width: 100%;
+  width: 100%;
+  height: 35rem;
   border-radius: 10px;
   cursor: pointer;
 }
 #projects figure figcaption {
   padding-block: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
 }
 #projects figure figcaption h3 {
   padding-block: 1rem;
@@ -266,8 +320,8 @@ main {
 #certificate {
   padding: 2rem;
   color: var(--font-color);
-  border-bottom: 1px dashed var(--secondary-background);
   max-width: 100%;
+  margin-block: 10rem;
 }
 #certificate h2 {
   margin-top: 5rem;
@@ -285,7 +339,8 @@ main {
 /* Technologies Style */
 #techstack {
   max-width: 100%;
-  border-bottom: 1px dashed var(--secondary-background);
+  margin-block: 10rem;
+  padding: 2rem;
 }
 #techstack h2 {
   margin-top: 5rem;
@@ -305,21 +360,21 @@ main {
 }
 #techstack figure img {
   max-width: 8rem;
-  padding: 1rem;
-  border-radius: 50%;
+  border-radius: 5px;
   background-color: var(--secondary-background);
 }
 /* End */
 
 /* About me Style */
 #about {
+  padding: 2rem;
   max-width: inherit;
-  padding-block: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
   text-align: center;
+  margin-block: 10rem;
 }
 #about h2 {
   margin-top: 5rem;
@@ -332,6 +387,10 @@ main {
   height: 25rem;
   border-radius: 200rem;
   border: 5px solid var(--secondary-font);
+}
+#about figcaption {
+  max-width: 80rem;
+  margin: 0 auto;
 }
 #about figcaption p {
   line-height: 1.7;
@@ -359,8 +418,8 @@ main {
 
 /* contacts style */
 #contacts {
-  border-block: 1px dashed var(--secondary-background);
-  padding-block-end: 5rem;
+  padding: 2rem;
+  margin-block: 10rem;
 }
 #contacts h2 {
   margin-block: 5rem;
@@ -423,6 +482,33 @@ main {
 
 footer {
   background-color: var(--secondary-background);
-  outline: 1px solid black;
-  padding: 10rem;
+  margin-top: 2rem;
+}
+.footer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .footer section a,
+footer .footer section p {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+footer .footer section:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .footer section:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .footer section a img,
+footer .footer section p img {
+  width: 2rem;
 }

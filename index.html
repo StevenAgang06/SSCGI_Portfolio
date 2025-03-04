@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css">
     <script src="js/function.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </head>
@@ -45,11 +46,11 @@
       <nav>
         <ul>
           <li><a class="link" href="#">Home</a></li>
-          <li><a class="link" href="#">Projects</a></li>
-          <li><a class="link" href="#">Certificates</a></li>
-          <li><a class="link" href="#">Technologies</a></li>
-          <li><a class="link" href="#">About Me</a></li>
-          <li><a class="link" href="#">Contacts</a></li>
+          <li><a class="link" href="#projects">Projects</a></li>
+          <li><a class="link" href="#certificate">Certificates</a></li>
+          <li><a class="link" href="#techstack">Technologies</a></li>
+          <li><a class="link" href="#about">About Me</a></li>
+          <li><a class="link" href="#contacts">Contacts</a></li>
         </ul>
       </nav>
     </header>
@@ -66,8 +67,8 @@
             Hello! I'm Steven Agang, a passionate Full Stack Developer with a knack for Web and System Development. With a background in HTML, CSS, JavaScript, PHP, CodeIgniter, and SQL, I thrive on creating innovative solutions and bringing ideas to life. My journey has been fueled by a love for solving problems, and I am always eager to take on new challenges and learn from every experience. Welcome to my portfolio, where you can explore my work, projects, and the story behind my professional journey.
           </p>
           <section>
-            <a href="">Work with me</a>
-            <a href="">Learn More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="goDown">
+            <a href="#contacts">Work with me</a>
+            <a href="#about">Learn More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="goDown">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
               </svg>
               </a>
@@ -79,6 +80,53 @@
       </section>
      <section id="projects">
         <h2>Projects</h2>
+        <figure>
+          <span>
+            <a class="live" href="https://vera-it-solution.vercel.app/" target="_blank">Visit</a>
+            <a class="github" href="https://github.com/StevenAgang06/VeraITSolution" target="_blank">
+              <img src="img/github.png" alt="github" loading="lazy" />
+            </a>
+          </span>
+          <img
+            class="image"
+            src="img/project/vera.png"
+            alt="chatbot"
+            loading="lazy"
+          />
+          <figcaption>
+            <h3>VeraITSolution</h3>
+            <p>Vera Is a great Software Solution for small and enterprise company.</p>
+          </figcaption>
+          <section class="tech">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>RESPONSIVE</p>
+          </section>
+        </figure>
+        <figure>
+          <span>
+            <a class="live" href="https://sparkling-mooncake-a7b8e4.netlify.app/" target="_blank">Visit</a>
+            <a class="github" href="https://github.com/StevenAgang06/OmniFood" target="_blank">
+              <img src="img/github.png" alt="github" loading="lazy" />
+            </a>
+          </span>
+          <img
+            class="image"
+            src="img/project/omnifood.png"
+            alt="chatbot"
+            loading="lazy"
+          />
+          <figcaption>
+            <h3>OmniFood</h3>
+            <p>Omnifood is startup that uses AI to create deliver custom healthy meal plans.</p>
+          </figcaption>
+          <section class="tech">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>RESPONSIVE</p>
+          </section>
+        </figure>
         <figure>
           <span>
             <a class="live" href="https://htmlanalyzer.onrender.com/" target="_blank">Visit</a>
@@ -262,7 +310,9 @@
             I believe in the power of innovation and continuous improvement, and I strive to incorporate this into my work every day. Whether it's developing user-friendly websites or creating efficient system solutions, I approach each challenge with creativity and enthusiasm.
             When I'm not working, you can find me exploring new technologies, reading tech blogs, or hiking in nature. I love exploring new ideas and connecting with like-minded individuals. Feel free to reach out if you'd like to collaborate or just chat about web development and technology.       
           </p>
-          <a href="">Download My CV</a>
+          <section>
+            <a href="files/resume.pdf" target="_blank">Download My CV</a>
+          </section>
         </figcaption>
       </section>
       <section id="contacts">
@@ -285,8 +335,28 @@
       </section>
     </main>
     <footer>
-        <section>
+      <section class="footer">
+          <section>
+            <h3>Socials</h3>
+            <a href="https://www.facebook.com/xxKenshiexx"><img src="img/socials/facebook.png" alt="" loading="lazy"> Facebook</a>
+            <a href="https://github.com/StevenAgang06"><img src="img/socials/github-sign.png" alt=""  loading="lazy"> Github</a>
         </section>
+        <section>
+          <h3>Contacts</h3>
+          <p><img src="img/socials/phone-call.png" alt="" loading="lazy"> 0951-766-0405</p>
+          <p><img src="img/socials/gps.png" alt=""  loading="lazy"> Catmon Malabon City</p>
+          <p><img src="img/socials/email.png" alt=""  loading="lazy"> stevenagang06@gmail.com</p>
+        </section>
+        <section>
+          <h3>Helpful Links</h3>
+          <a href="#">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#certificate">Certification</a>
+          <a href="#techstack">Technologies</a>
+          <a href="#about">About Me</a>
+          <a href="#contacts">Contacs</a>
+        </section>
+      </section>
     </footer>
   </body>
 </html>

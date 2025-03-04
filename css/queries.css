@@ -1,0 +1,175 @@
+/* For landscape Mobile */
+@media (min-width: 600px) {
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 1fr;
+    column-gap: 2rem;
+  }
+  #projects h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #projects figure .image {
+    height: 30rem;
+  }
+}
+/* For Tablet */
+@media (min-width: 924px) {
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10rem auto;
+    column-gap: 2rem;
+  }
+  #projects h2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  #projects figure .image {
+    height: 30rem;
+  }
+  header {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  header svg {
+    display: none;
+  }
+  header nav {
+    height: auto;
+    max-width: 50%;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+}
+/* For laptop and Computer */
+@media (min-width: 1024px) {
+  #intro,
+  #about,
+  #techstack,
+  #certificate,
+  #contacts {
+    max-width: 85%;
+  }
+  #intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    margin-inline: auto;
+  }
+  #intro figure {
+    order: 1;
+  }
+  #intro section {
+    width: 100%;
+    text-align: left;
+  }
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10rem 1fr auto;
+    column-gap: 2rem;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  #projects h2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  #projects figure .image {
+    height: 25rem;
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    margin-inline: auto;
+    row-gap: 10rem;
+    max-width: 85%;
+  }
+  #about h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #about section {
+    width: 100%;
+    text-align: left;
+  }
+  #about figcaption {
+    position: relative;
+  }
+  #about section {
+    max-width: 100%;
+    padding-block: 1rem;
+    padding-inline: 2.5rem;
+  }
+  #techstack {
+    max-width: 85%;
+    margin-inline: auto;
+  }
+  #certification {
+    max-width: 80%;
+  }
+}
+
+/* For big screens */
+@media (min-width: 1399px) {
+  #intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    max-width: 85%;
+    margin-inline: auto;
+  }
+  #intro figure {
+    order: 1;
+  }
+  #intro section {
+    width: 100%;
+    text-align: left;
+  }
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10rem 1fr auto;
+    column-gap: 2rem;
+    max-width: 85%;
+    margin-inline: auto;
+  }
+  #projects h2 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  #projects figure .image {
+    height: 25rem;
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    margin-inline: auto;
+    row-gap: 10rem;
+    max-width: 85%;
+  }
+  #about h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #about section {
+    width: 100%;
+    text-align: left;
+  }
+}
