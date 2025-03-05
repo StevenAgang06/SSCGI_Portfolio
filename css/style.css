@@ -306,6 +306,7 @@ main {
   background-color: var(--secondary-background);
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
+  transition: var(--transition);
 }
 #projects figure .live:hover,
 #projects figure .github:hover {
@@ -504,6 +505,10 @@ main {
   border-radius: 5px;
   background-color: var(--background);
   color: var(--secondary-font);
+  transition: var(--transition);
+}
+#contacts form input[type="submit"]:hover {
+  transform: scale(1.05);
 }
 #contacts form label {
   vertical-align: top;
