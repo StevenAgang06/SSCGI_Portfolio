@@ -14,7 +14,6 @@
 }
 ::-webkit-scrollbar-track {
   background: var(--background);
-  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 255, 0.5);
@@ -68,41 +67,41 @@ header article .slash,
 header article h2 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shiny 500ms infinite;
+  animation: shiny 400ms infinite;
 }
 
 @keyframes shiny {
   0% {
     background-image: linear-gradient(
       to bottom,
-      rgba(52, 58, 64, 0.5),
+      rgba(0, 0, 200, 0.9),
       var(--secondary-background)
     );
   }
   25% {
     background-image: linear-gradient(
       to left,
-      rgba(52, 58, 64, 0.5),
+      rgba(0, 0, 200, 0.9),
       var(--secondary-background)
     );
   }
   50% {
     background-image: linear-gradient(
       to top,
-      rgba(52, 58, 64, 0.5),
+      rgba(0, 0, 200, 0.9),
       var(--secondary-background)
     );
   }
   75% {
     background-image: linear-gradient(
       to right,
-      rgba(52, 58, 64, 0.5),
+      rgba(0, 0, 200, 0.9),
       var(--secondary-background)
     );
   }
   100% {
     background-image: linear-gradient(
-      rgba(52, 58, 64, 0.5),
+      rgba(0, 0, 200, 0.9),
       var(--secondary-background)
     );
   }
@@ -199,7 +198,7 @@ main {
   line-height: 1.7;
   letter-spacing: 1.5px;
   word-wrap: break-word;
-  font-size: 1.4rem;
+  font-size: 1.5vh;
   text-align: left;
   word-spacing: 1px;
   color: var(--secondary-font);
@@ -234,8 +233,13 @@ main {
   width: 1.5rem;
 }
 
-#intro figcaption section a:hover {
-  transform: rotate(90deg);
+#intro figcaption section a:first-child:hover {
+  background-color: var(--secondary-background);
+  color: var(--font-color);
+}
+#intro figcaption section a:nth-child(2):hover {
+  background-color: var(--font-color);
+  color: var(--secondary-background);
 }
 
 /* End */
@@ -300,11 +304,13 @@ main {
 #projects figure .github {
   border-radius: 5px;
   background-color: var(--secondary-background);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
 }
 #projects figure .live:hover,
 #projects figure .github:hover {
   transform: scale(1.1);
-  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.9);
 }
 #projects figure .live {
   text-decoration: none;
@@ -313,8 +319,7 @@ main {
   padding: 1rem;
 }
 #projects figure span .github {
-  padding-block: 0.7rem;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 #projects figure span a img {
   width: 2rem;
@@ -419,7 +424,7 @@ main {
   padding-block: 1rem;
   padding-inline: 2.5rem;
   word-wrap: break-word;
-  font-size: 1.4rem;
+  font-size: 1.5vh;
   text-align: left;
   word-spacing: 1px;
   color: var(--secondary-font);
@@ -434,6 +439,12 @@ main {
   font-size: 1.5rem;
   display: inline-block;
   margin-top: 2rem;
+  transition: var(--transition);
+}
+#about figcaption a:hover {
+  background-color: var(--background);
+  color: var(--secondary-font);
+  box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.2);
 }
 /* End */
 
@@ -533,4 +544,9 @@ footer .footer section:nth-child(3) {
 footer .footer section a img,
 footer .footer section p img {
   width: 2rem;
+}
+footer .footer section a:hover {
+  color: rgba(0, 0, 200, 0.9);
+  font-weight: 600;
+  transition: var(--transition);
 }
